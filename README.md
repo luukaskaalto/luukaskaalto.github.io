@@ -10,11 +10,13 @@ refer to the link for installation instructions
 ### Using TACTO to simulate & train agents
 #### 1. Valve Agent
 Placeholder text...
+
 ![Project Demo](gifs/latest-ezgif.com-crop.gif)
 
 ## Physical Testing
 ### Overview
 Placeholder text...
+
 ![Project Demo](gifs/MicrosoftTeams-video(2).gif)
 
 ### Sim-to-real
