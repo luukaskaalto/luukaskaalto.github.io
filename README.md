@@ -22,6 +22,12 @@ This agent is designed to better utilize the capabilities of the framework. Here
 ![Depth:](imgs/depth_000000.png) ![Color:](imgs/color_000000.png) ![Depth:](imgs/depth_000005.png) ![Color:](imgs/color_000005.png)
 ![Plot:](imgs/image.png)
 
+PCA image reconstruction:
+![Example:](imgs/output0.png) ![Example:](imgs/output5.png) ![Example:](imgs/output4.png)![Example:](imgs/output2.png)![Example:](imgs/output7.png)
+
+Cases to keep an eye on - first image: no contact & second image: full contact (both relatively common in the simulation)
+![Example:](imgs/output1.png) ![Example:](imgs/output3.png)
+
 Initial training results:
 
 ![Project Demo](gifs/latest1-ezgif.com-speed.gif)
