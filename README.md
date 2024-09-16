@@ -1,3 +1,5 @@
+This is a project page that gives a general overview of the reaearch done in the 2-month working period regarding dexterous manipulation with a visuo-tactile multi-finger hand at Aalto University - School of Electrical Engineering. The project builds the tools to conduct further research among closely related topics and will see more further use in the future.
+
 # Simulation
 
 ## Overview
@@ -35,7 +37,7 @@ Initial training results:
 ## Physical Testing
 
 ### Overview
-Placeholder text...
+The University offers the multi-finger hand as a testing tool to try out trained policies in the real world. However, sim2real transfers are yet to be made in this project as they will expectedly increase the scope of the research. If you're interested in this,  a paper by Entong Su et al. may be interesting: [Sim2Real Manipulation on Unknown Objects with Tactile-based Reinforcement Learning](https://arxiv.org/abs/2403.12170)
 
 ![Project Demo](gifs/MicrosoftTeams-video(2).gif)
 
@@ -53,10 +55,8 @@ digits = tacto.Sensor(**cfg.tacto, background=bg)
 ```
 
 ### Discussion
-Placeholder text...
+Currently, the project is not being pursued further but serves as a tentative foundation for a future Master's thesis. The exact topic of the thesis has yet to be decided.
 
 ## Links
 - [Project Repository](https://github.com/trannguyenle95/multifingered-tactile)
-- [Related Research Papers](#)
-
 ---
