@@ -1,4 +1,4 @@
-This is a project page that gives a general overview of the reaearch done in the 2-month working period regarding dexterous manipulation with a visuo-tactile multi-finger hand at Aalto University - School of Electrical Engineering. The project builds the tools to conduct further research among closely related topics and will see more further use in the future.
+This project page gives a general overview of the research done in the 2-month working period regarding dexterous manipulation with a visuo-tactile multi-finger hand at Aalto University - School of Electrical Engineering. The project builds the tools to conduct further research among closely related topics and will see further use in the future.
 
 # Simulation
 
