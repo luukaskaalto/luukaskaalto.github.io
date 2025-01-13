@@ -1,9 +1,9 @@
-This project page gives a general overview of the research done in the 2-month working period regarding dexterous manipulation with a visuo-tactile multi-finger hand at Aalto University - School of Electrical Engineering. The project builds the tools to conduct further research among closely related topics and will see further use in the future.
+This is a documentation of a robotics project to whom ever it may interest. This project page acts as a general overview of the research done in the 2-month working period regarding dexterous manipulation with a visuo-tactile multi-finger hand at Aalto University - School of Electrical Engineering. The project builds the tools to conduct further research among closely related topics and will see further research during the Spring of 2025. Further research will aim to strike a balance in reducing the dimension of the tactile data while simultaneously extracting the most meaningful data for an RL-agent to learn as well and efficiently as possible.
 
 # Simulation
 
 ## Overview
-- [TACTO](https://github.com/facebookresearch/tacto) serves as the simulation platform. Refer to the documentation for installation and instructions.
+- [TACTO](https://github.com/facebookresearch/tacto) is a Pybullet based physics simulator that serves as the simulation platform for this project. Refer to the documentation for installation and instructions.
 - [Stable-Baselines3](https://stable-baselines3.readthedocs.io/en/master/) provides implementations of reinforcement learning algorithms in PyTorch.
 - [Gymnasium](https://github.com/Farama-Foundation/Gymnasium) is the base gym environment for agent training.
 
@@ -14,21 +14,18 @@ The purpose of the simulation is to explore the possibilities of the robot hand 
 ## Using TACTO to Simulate & Train Agents
 
 ### 1. Valve Agent
-The first step of the project is to train a simple valve-turning agent to rotate a valve handle by 180 degrees.
+The first step of the project is to train a simple valve-turning agent to rotate a valve handle by 180 degrees. This basic example showcases and tests the now built framework for training RL agents in our environment.
 
 ![Project Demo](gifs/latest-ezgif.com-crop.gif)
 ---
 ### 2. Bottle Cap Rotating Agent
-This agent is designed to better utilize the capabilities of the framework. Here, we apply PCA to extract key components of the tactile images, allowing the agent to learn from the entire observation while drastically reducing the observation space. The PCA is applied to a set of 500 depth images to choose 15 principal components:
+This agent is designed to better utilize the capabilities of the framework. Here, we apply PCA to extract key components of the tactile images, allowing the agent to still learn from the entire observation while drastically reducing the observation space thus reducing the computational costs significantly. The PCA is applied to a set of 500 depth images to choose 15 principal components. The following images first showcases an example depth image (black & white), and the second shows that we obtain a Cumulative explained variance of 0.95 when choosing 15-16 principal components:
 
 ![Depth:](imgs/depth_000000.png) ![Color:](imgs/color_000000.png) ![Depth:](imgs/depth_000005.png) ![Color:](imgs/color_000005.png)
 ![Plot:](imgs/image.png)
 
 PCA image reconstruction:
 ![Example:](imgs/output0.png) ![Example:](imgs/output5.png) ![Example:](imgs/output4.png)![Example:](imgs/output2.png)![Example:](imgs/output7.png)
-
-Cases to keep an eye on - first image: no contact & second image: full contact (both relatively common in the simulation)
-![Example:](imgs/output1.png) ![Example:](imgs/output3.png)
 
 Initial training results:
 
@@ -42,7 +39,7 @@ The University offers the multi-finger hand as a testing tool to try out trained
 ![Project Demo](gifs/MicrosoftTeams-video(2).gif)
 
 ### Sim-to-Real
-To bridge sim to real, TACTO provides an ability to change the background of the simulated sensor, so both simulated and real tactile images can be used with PCA's or VAE's
+Below is shown an example on how to apply a sensor specific image to the simulator to closely match the color scheme and sensor specific flaws in the simulator as well:
 
 ![sim2real](imgs/image_copy_3.png)
 
@@ -55,7 +52,7 @@ digits = tacto.Sensor(**cfg.tacto, background=bg)
 ```
 
 ### Discussion
-Currently, the project is not being pursued further but serves as a tentative foundation for a future Master's thesis. The exact topic of the thesis has yet to be decided.
+Currently, the project serves as a tentative foundation for a future Master's thesis. The exact topic of the thesis is currently being explored.
 
 ## Links
 - [Project Repository](https://github.com/trannguyenle95/multifingered-tactile)
